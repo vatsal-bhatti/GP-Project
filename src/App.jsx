@@ -10,13 +10,10 @@ function App() {
   const router = Router();
   return (
     <>
-
-    <Suspense fallback={<Loader/>}>
-    <RouterProvider router={router} />
-
-    </Suspense>
-      
-    
+      <Suspense fallback={<Loader />}>
+        <RouterProvider router={router} />
+        <>hello</>
+      </Suspense>
     </>
   );
 }
