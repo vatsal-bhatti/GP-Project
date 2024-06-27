@@ -12,7 +12,6 @@ function App() {
     <>
       <Suspense fallback={<Loader />}>
         <RouterProvider router={router} />
-        <>hello</>
       </Suspense>
     </>
   );
