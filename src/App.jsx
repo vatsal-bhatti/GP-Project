@@ -1,8 +1,4 @@
-import { Routes, Route, RouterProvider } from "react-router-dom";
-import Home from "./components/Home";
-import Cart from "./components/Cart";
-import Error404 from "./components/Error404";
-import Login from "./components/Login-Register/Login";
+import { RouterProvider } from "react-router-dom";
 import Router from "./Routes/RouteIndex";
 import { Suspense } from "react";
 import Loader from "./components/common/Loader";
