@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import HeroSection from "./HeroSection";
 
 function Home() {
-  const [currentPage, setCurrentPage] = useState(1);
+  // const [currentPage, setCurrentPage] = useState(1);
 
   const displayArray = Array.from(Array(1001).keys()).slice(1);
   console.log(displayArray);
@@ -9,7 +10,10 @@ function Home() {
 
   return (
     <div>
-      Home Component
+     
+
+<HeroSection/>
+      
       {/* <div className=""><Pagination data={displayArray}  recordsPerPage={10}/> 
 </div> */}
     </div>

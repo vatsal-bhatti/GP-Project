@@ -33,7 +33,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-[#000000CC] text-[#FFFFFFE7] py-[10px] box-border">
+    <nav className="bg-[#000000CC] text-[#FFFFFFE7] py-[10px] box-border sticky z-[1000] top-0  h-fit ">
       <div className="container-fluid contai flex justify-between items-center mx-auto lg:mx-[60px] px-2 lg:px-[12px]  w-full lg:w-fit relative">
         <div className="flex justify-between items-center text-xl font-bold">
           <div className="text-[32px] leading-[38.4px] font-bold text-white">
@@ -139,7 +139,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <button className=" order-2 lg:block bg-[#000000CC] border-[1.6px] border-[#FFC451] text-white px-[15px] lg:px-[30px] py-[6px] lg:py-[8px] lg:ml-[30px] mr-[15px] lg:mr-0 rounded-[4px] hover:bg-[#FFC451] transition-colors duration-[0.3s] hover:cursor-pointer text-[14px] font-normal  ">
+        <button className=" order-2 lg:block bg-[#000000CC] border-[1.6px] border-[#FFC451] text-white px-[15px] lg:px-[30px] py-[6px] lg:py-[8px] lg:ml-[30px] mr-[20px] lg:mr-0 rounded-[4px] hover:bg-[#FFC451] transition-colors duration-[0.3s] hover:cursor-pointer text-[14px] font-normal  ">
           Get Started
         </button>
 
