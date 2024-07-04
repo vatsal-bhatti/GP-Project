@@ -1,23 +1,22 @@
 // import React, { useState } from "react";
 import HeroSection from "./HeroSection";
+import OfficePhotoSection from "./OfficePhotoSection";
 
 function Home() {
-  // const [currentPage, setCurrentPage] = useState(1);
+ // const [currentPage, setCurrentPage] = useState(1);
 
-  const displayArray = Array.from(Array(1001).keys()).slice(1);
-  console.log(displayArray);
-  // dispatch(action1);
+ const displayArray = Array.from(Array(1001).keys()).slice(1);
+ console.log(displayArray);
+ // dispatch(action1);
 
-  return (
-    <div>
-     
-
-<HeroSection/>
-      
-      {/* <div className=""><Pagination data={displayArray}  recordsPerPage={10}/> 
+ return (
+  <div>
+   <HeroSection />
+   <OfficePhotoSection />
+   {/* <div className=""><Pagination data={displayArray}  recordsPerPage={10}/> 
 </div> */}
-    </div>
-  );
+  </div>
+ );
 }
 
 export default Home;
