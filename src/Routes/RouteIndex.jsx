@@ -1,47 +1,52 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import PrivateRoute from "./PrivateRoutes/PrivateRoute";
-// import Error404 from "../components/Error404";
-// import Home from "../components/Home";
-// import Layout from "../components/layout/Layout";
 
-const Error404 = React.lazy(() => import("../components/Error404"));
+// import ServiceDetailsPage from "../components/layout/Pages/ServiceDetails/ServiceDetailsPage";
+// import HomePage from "../components/layout/Pages/Home/HomePage";
+// import PortfolioDetails from "../components/layout/Pages/PortfolioDetails/PortfolioDetails";
+const Error404 = React.lazy(() => import("../components/common/Error404"));
 const Layout = React.lazy(() => import("../components/layout/Layout"));
-const Login = React.lazy(() => import("../components/Login-Register/Login"));
-const Home = React.lazy(() => import("../components/Home"));
-const Register = React.lazy(() =>
-  import("../components/Login-Register/Register")
+const HomePage = React.lazy(() =>
+ import("../components/layout/Pages/Home/HomePage")
+);
+const ServiceDetailsPage = React.lazy(() =>
+ import("../components/layout/Pages/ServiceDetails/ServiceDetailsPage")
+);
+const PortfolioDetails = React.lazy(() =>
+ import("../components/layout/Pages/PortfolioDetails/PortfolioDetails")
 );
 
 function Router() {
-  const condition = false;
-  return createBrowserRouter([
+ const condition = false;
+ return createBrowserRouter([
+  {
+   path: "*",
+   element: <Error404 />,
+  },
+  {
+   element: <Layout />,
+   children: [
     {
-      path: "*",
-      element: <Error404 />,
+     path: "/",
+     element: <HomePage />,
     },
     {
-      element: <Layout />,
-      children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
-        {
-          path: "/login",
-          element: <Login />,
-        },
-        {
-          path: "/register",
-          element: <Register />,
-        },
-        {
-          element: <PrivateRoute isAuth={condition ? true : false} />,
-          children: [],
-        },
-      ],
+     path: "/service-details",
+     element: <ServiceDetailsPage />,
     },
-  ]);
+    {
+     path: "/portfolio-details",
+     element: <PortfolioDetails />,
+    },
+    {
+     element: <PrivateRoute isAuth={condition ? true : false} />,
+     children: [],
+    },
+   ],
+  },
+ ]);
 }
-
+// https://bootstrapmade.com/demo/templates/Gp/service-details.html
+// https://bootstrapmade.com/demo/templates/Gp/portfolio-details.html
 export default Router;
